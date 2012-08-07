@@ -62,7 +62,7 @@
         }
       }
 
-      if (!this._validate(newAttrs, opts)) return false;
+      if (!this._validate(newAttrs, opts, chgs)) return false;
       
       for (var changedAttr in chgs) {
         this.trigger('change:' + changedAttr, this, chgs[changedAttr]);
